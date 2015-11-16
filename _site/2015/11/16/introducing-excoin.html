@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>jcoschig.github.io by johncosch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name"><a href="/" style="color: white;">John Coschigano</a></h1>
+      <h2 class="project-tagline">Stay thirsy my friends.</h2>
+    </section>
+
+    <section class="main-content">
+
+      <h2 id="introducing-excoin">Introducing Excoin</h2>
+<p>I recently released a very early version of my most recent open source project, Excoin. Before you jump to the conclusion that it’s just some useless programming exercise, let me fill you in with some context. I am a huge bitcoin proponent. I believe in it’s future, and that under the right circumstances it can solve many issues that our increasingly global economy faces today. So like any true fan when I read Daniel Cawrey’s opinions on the decreasing trend of nodes in “What Are Bitcoin Nodes and Why Do We Need Them?” I became a little concerned. It just so happened that I was studying the Elixir programming language at the time, and an idea popped into my head. Can the bitcoin infrastructure be improved with elixir?</p>
+
+<h3 id="the-problem">The Problem</h3>
+<p>For an in-depth description of the problem i’d suggest reading <a href="http://www.coindesk.com/bitcoin-nodes-need/">What Are Bitcoin Nodes and Why Do We Need Them?</a>, but I’ll try to give you the rundown. The Bitcoin network is totally distributed, meaning there’s no organization solely responsible for maintaining it. In the past most bitcoin users would download a reference client (bitcoin-core), which would serve most roles that bitcoin requires (wallet, miner, full blockchain database, network router). The problem is that downloading bitcoin-core requires you to download the entire blockchain, over 20GB of storage (for now) which will take over a day. This solution is only really attractive to hardcore Bitcoin users. It’s pretty obvious why lightweight (SPV) wallets are quickly becoming the new trend. However, these light wallets still need to verify their transactions with a full blockchain database, which puts more load on the existing infrastructure. The increased load means that we need nodes capable of handling this kind of work, enter the Full Block Chain Node. These nodes are responsible for storing a full blockchain database as well as network routing on the bitcoin P2P network. The issue is they serve no purpose to an individual user other than helping out the rest of the network aka most bitcoin users will not pay expenses required to maintain a full blockchain node. There will be some people and organizations who will however, especially if it’s relatively inexpensive to do so.  <br />
+### Why Elixir?</p>
+
+<p>So I’m sure by now your thinking, where does Elixir come into the picture. As I discussed in an earlier [post](http://johncosch.github.io/2015/10/27/elixir-magic-potion.html Elixir is extremely good at handling concurrency, and was built for distributed systems. Just to give you an idea how powerful OTP (Open Telecom Protocol) apps can be consider this, the What’s app team of 32 engineers was able to support 450 million users using this kind of infrastructure. That’s Powerful. Moreover, each machine is far better utilized so any individual who wants to spin up a server and give back to the cause will theoretically be able to contribute much more to the network than other implementations, while still taking some load off of the rest of the network. This could lead to dramatic cost savings and efficiency improvements across the entire network, allowing bitcoin to continue to thrive. </p>
+
+<h3 id="the-result">The Result</h3>
+
+<p>Of course my first thought was to build a bitcoin node similar to Coindesk’s Toshi or Bitpay’s Bitcore. However when I started on this path I found myself writing a lot of protocol code. Being the nice guy that I am, I decided to split the two projects and allow other developers to utilize Excoin in their own OTP node implementations. While a full Elixir node is the end goal, for now I will be focusing on getting Excoin to a stable release. That being said there’s still quite a bit to do before that point so I would welcome anyone to contribute to the codebase! </p>
+
+
+      <footer class="site-footer">
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
