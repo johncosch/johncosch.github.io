@@ -1,9 +1,10 @@
 ---
 layout: default
 title: Elixir - Real Magic
-
-![Elixir](https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjZ7dvXn8DLAhVDHB4KHcqmCZoQjRwIBw&url=https%3A%2F%2Fgithub.com%2Felixir-lang%2Felixir&psig=AFQjCNGNODf1Sw4Uezx8zHfqDH3RS0-gUA&ust=1458047322502818)
 ---
+
+![Elixir](https://avatars2.githubusercontent.com/u/1481354?v=3&s=400)
+
 ## Elixir - Real Magic
 The definition of elixir is "a magical or medicinal potion." and that's pretty much exactly how I would describe the elixir programming language to other developers. Well...that's how it felt to me at least, like magic. Many of the features of Elixir sound too good to be true like it's incredible speed, efficient/simple concurrency, extreme reliability, hot code swapping, and powerful distribution. Of course, it's not really the Elixir language which facilitates this awesomeness. You can thank BEAM (the Erlang VM) for that, which Elixir runs on. I'm sure all of you are thinking, "Why hasn't Erlang taken over the world then if it can do all of this cool stuff too?". That's a great question because Erlang has been open source since 1998, and was used internally at Ericsson since 1986. I am certainly not an expert on the subject, but i'll try to summarize as best as I can.
 
